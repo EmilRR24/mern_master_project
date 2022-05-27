@@ -28,7 +28,7 @@ function Games() {
 
   return(
     <div>
-      <h1>Most Popular Games</h1>
+      <h1>Most Popular Streams</h1>
       <div className="row">
         {games.map(game => (
           <div className="col-lg-2">

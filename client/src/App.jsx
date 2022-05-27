@@ -1,7 +1,8 @@
-import './App.css';
+// import './App.css';
 import React, { useState } from "react";
 import Homepage from './views/Homepage';
 import List from './views/List';
+import Splash from './views/Splash';
 import GameStreams from './views/GameStreams';
 import Slide from './components/Slide';
 
@@ -16,7 +17,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Homepage refreshState={refreshState} refresh={refresh}/>}/>
+        <Route path="/" element={<Splash />}/>
+        <Route path="/home" element={<Homepage refreshState={refreshState} refresh={refresh}/>}/>
         <Route path="/list" element={<List />}/>
         <Route path="/list/game/:id" element={<GameStreams />}/>
         <Route path="/slide" element={<Slide />}/>
