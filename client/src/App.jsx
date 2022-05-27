@@ -5,6 +5,7 @@ import List from './views/List';
 import Splash from './views/Splash';
 import GameStreams from './views/GameStreams';
 import Slide from './components/Slide';
+import Carousel from "./components/threeDcover";
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 

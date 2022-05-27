@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../components/3dcover.css';
+import '../components/threeDcover.css';
 
 const slides = [
 {
@@ -156,13 +156,13 @@ const initialState = {
 
 
 const slidesReducer = (state, event) => {
-  if (event.type === "NEXT") {
+  if (event.type === "PREV") {
     return {
       ...state,
       slideIndex: (state.slideIndex + 1) % slides.length };
 
   }
-  if (event.type === "PREV") {
+  if (event.type === "NEXT") {
     return {
       ...state,
       slideIndex:
@@ -227,4 +227,3 @@ function Carousel() {
 export default Carousel;
 // const elCarousel = document.getElementById("carousel");
 // ReactDOM.render( /*#__PURE__*/React.createElement(Carousel, null), elCarousel);
-

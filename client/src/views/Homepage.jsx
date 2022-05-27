@@ -175,7 +175,7 @@ const Homepage = () => {
                 </div>
                 <button type="submit" className="btn btn-primary">Login</button>
             </form>
-            <Slide />
+            {/* <Slide /> */}
         </div>
           <div className="bodyRight"></div> {/*OUTSIDE BORDER DON'T USE THIS DIV*/}
       </div>
