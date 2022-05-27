@@ -59,7 +59,12 @@ module.exports.register = (req, res) => {
                 return gamer.save()
             }
         })
-        .then(gamer => res.json(gamer))
+        .then(gamer => {
+            const newJWT = jwt.sign({
+                _id:gamer._id
+            }, "SECRET_KEY")
+            res.cookie("gamertoken", newJWT, {httpOnly:true}).json({message: "success" , verified : true})
+            res.json(gamer)})
         .catch(err => res.status(400).json(err))
 }
 
@@ -78,7 +83,7 @@ module.exports.login = (req,res) => {
                             const newJWT = jwt.sign({
                                 _id:gamer._id
                             }, "SECRET_KEY")
-                            res.cookie("gamertoken", newJWT, {httpOnly:true}).json("success")
+                            res.cookie("gamertoken", newJWT, {httpOnly:true}).json({message: "success" , verified : true})
                         }
                         else{
                             res.status(400).json({msg:"INVALID ATTEMPT"})
@@ -89,4 +94,9 @@ module.exports.login = (req,res) => {
 
 }
 
-//-----------LOGIN/REGISTRATION AUTHENTICATION---------------------------//
+//-----------LOGOUT---------------------------//
+// LOG OUT
+module.exports.logout = (req,res) => {
+    res.status(200).clearCookie('gamertoken').json("LOGOUT!");
+    // res.sendStatus(200);
+}

@@ -19,4 +19,6 @@ module.exports = app => {
     app.post("/api/gamers/register", GamerController.register)
     // LOGIN GAMER
     app.post("/api/gamers/login", GamerController.login)
+    // LOGOUT GAMER
+    app.get("/logout", GamerController.logout);
 }

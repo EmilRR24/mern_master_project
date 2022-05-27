@@ -84,6 +84,11 @@ const Homepage = () => {
       [e.target.name]: e.target.value,
     });
   };
+  const logout = () => {
+    axios.get("http://localhost:8000/logout", {withCredentials: true})
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
+}
   return (
     <div>
       <div className="navBar">
@@ -98,7 +103,7 @@ const Homepage = () => {
           <p>|</p>
           <p className="headerButton" onClick={()=>{navigate('/{user_id}')}}>Account</p>
           <p>|</p>
-          <p className="headerButton">Logout</p>
+          <p className="headerButton" onClick={logout}>Logout</p>
         </div>
       </div>
       <div className="body" style={{'height':1000}}>

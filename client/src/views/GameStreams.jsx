@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useParams, useLocation, useNavigate} from 'react-router-dom';
-
+import axios from 'axios';
 import api from '../api'
 
 function GameStreams() {
@@ -33,6 +33,14 @@ function GameStreams() {
     };
     fetchData();
   }, []);
+
+  const logout = () => {
+    axios.get("http://localhost:8000/logout", {withCredentials: true})
+        .then(res => {
+          navigate('/home');
+          console.log(res.data)})
+        .catch(err => console.log(err))
+}
   return (
     <div>
       <div className="navBar">
@@ -47,7 +55,7 @@ function GameStreams() {
           <p>|</p>
           <p className="headerButton" onClick={()=>{navigate('/{user_id}')}}>Account</p>
           <p>|</p>
-          <p className="headerButton">Logout</p>
+          <p className="headerButton" onClick={logout}>Logout</p>
         </div>
       </div>
       <div className="body" style={{'height':2350}}>

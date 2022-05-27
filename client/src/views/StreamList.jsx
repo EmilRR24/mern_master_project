@@ -9,6 +9,14 @@ const StreamList = () => {
 
   const [games, setGames] = useState([]);
 
+  const logout = () => {
+    axios.get("http://localhost:8000/logout", {withCredentials: true})
+        .then(res => {
+          navigate('/home');
+          console.log(res.data)})
+        .catch(err => console.log(err))
+}
+
   return (
     <div>
       <div className="navBar">
@@ -23,7 +31,7 @@ const StreamList = () => {
           <p>|</p>
           <p className="headerButton" onClick={()=>{navigate('/{user_id}')}}>Account</p>
           <p>|</p>
-          <p className="headerButton">Logout</p>
+          <p className="headerButton" onClick={logout}>Logout</p>
         </div>
       </div>
       <div className="body">

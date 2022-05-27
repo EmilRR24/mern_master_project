@@ -45,7 +45,7 @@ h1{
   border: none;
   color: white;
   position: absolute;
-  font-size: 5rem;
+  font-size: 15rem;
   width: 5rem;
   height: 5rem;
   top: 30%;
@@ -73,7 +73,7 @@ h1{
   background-position: center center;
   background-repeat: no-repeat;
   transition: transform 0.5s ease-in-out;
-  /* opacity: 0.5; */
+  opacity: 0.5;
   display: grid;
   align-content: center;
   transform-style: preserve-3d;
