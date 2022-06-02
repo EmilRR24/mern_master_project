@@ -5,8 +5,8 @@ import Carousel from "../components/threeDcover";
 const Splash = () => {
     return (
         <div className="htmlWRAP">
-                    <Link to="/home" style={{'textDecoration':'none'}}>
-                      <h1>EVERYONE IS A GAMER!</h1>
+                    <Link to="/home">
+                        <img style={{'margin':'auto', 'display':'block'}} src={require('../components/images/slogan_transparent.png')} alt="" />
                     </Link>
             <div className="bodyWRAP">
                     <Carousel />
