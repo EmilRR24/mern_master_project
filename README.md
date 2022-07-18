@@ -1,4 +1,4 @@
-## Gamer's Live
+# Gamer's Live
 Gamer's Live is a live streaming web platform inspired by the Twitch application. The web application was built using MERN, creating REST APIs that can perform the needed functions create, read, write and delete data from the MongoDB database and rendered using React. 
 ## Features
 - Login and Registration wth validations
