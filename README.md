@@ -7,6 +7,8 @@ Gamer's Live is a live streaming web platform inspired by the Twitch application
 - Incorporated images with CSS and javascript to create a unique and dynamic carousel of images to showcase top streamers
 - Twitch APIs included to render the current top category of games being streamed 
 - Filter the top streamers of each game category using APIs
+## Author
+Emil Ramirez: https://github.com/EmilRR24
 ### Contributors 
 Developed by Emil Ramirez, Kevin Yu, Ryan Fleming, Ben Lublin
 ###  Work Completed By Each Developer
